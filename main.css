@@ -1,0 +1,101 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.30)), url("pexels-photo-3389618.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+ul {
+    display: flex;
+    margin-left: fill;
+}
+a{
+    color: azure;
+    text-decoration: none;
+    font-size: 20px;
+}
+.navbar ul li {
+    list-style: none;
+    margin: 0 20px;
+    text-decoration: none;
+}
+.logo{
+    width: 200px;
+    height: 50px;
+}
+.search-container{
+    padding-right: 0px;
+
+
+}
+
+input[type=text] {
+    float: right;
+    padding: 6px;
+    margin-top: 8px;
+    margin-right: 16px;
+    border: none;
+    font-size: 17px;
+    border-radius: 20px;
+    width: 350px;
+}
+.welkom{
+    max-width: 600px; /*Stelt de maximale breedte in van de div*/
+    text-align: center; /*Zet de tekst in hetmidden*/
+    color: azure;
+    display: flex; /*Activeert flexbox*/
+    align-items: center; /*Zet de content in het midden van de parent.*/
+    /*Gaat met de klok mee: margin-tp, right, bottom, left*/
+    top: 40%;
+    position: relative;
+   margin-left: auto;
+    margin-right: auto;
+}
+.welkom h1{
+    font-size: 40px;
+}
+.navbar ul li a {
+    position:relative;
+    z-index: 1;
+}
+.navbar ul li a:hover {
+    color: black;
+}
+.navbar ul li a:after {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    height: 1px;
+    content: '.';
+    color: transparent;
+    background: red;
+    visibility: none;
+    opacity: 0;
+    z-index: -1;
+}
+.navbar ul li a:hover:after {
+    opacity: 1;
+    visibility: visible;
+    height: 100%;
+}
+
